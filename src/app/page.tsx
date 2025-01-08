@@ -1,6 +1,9 @@
-import { Footer } from '@/components/Footer';
-import Image from 'next/image';
+import { RecommendedModal } from '@/components/RecommendedModal';
 
 export default function Home() {
-  return <div></div>;
+  return (
+    <div>
+      <RecommendedModal />
+    </div>
+  );
 }
