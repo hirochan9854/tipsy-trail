@@ -5,7 +5,12 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "fix": "yarn fix:prettier && yarn fix:eslint",
+    "fix:eslint": "eslint src --fix",
+    "fix:prettier": "prettier src --write"
   },
   "dependencies": {
     "next": "15.1.1",
