@@ -47,10 +47,10 @@ export const DisplayGroupList = ({ initialCurrent }: GroupListProps) => {
         {['ビール', 'ウィスキー', 'リキュール', 'ワイン', 'テキーラ', 'ジン', 'ウォッカ', 'ラム', 'カクテル'].map(
           (name) => (
             <li
-              key={name}
-              className={`text-nowrap font-semibold cursor-pointer ${
+              className={`cursor-pointer text-nowrap font-semibold ${
                 current === name ? 'text-ll text-[#D6D1BF] underline underline-offset-4' : 'text-base text-[#333333]'
               }`}
+              key={name}
               onClick={() => handleClick(name)}
               ref={(element) => setItemRef(element, name)}
             >

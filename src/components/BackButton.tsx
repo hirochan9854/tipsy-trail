@@ -6,8 +6,8 @@ export type BackButtonProps = {
 };
 export const BackButton: React.FC<BackButtonProps> = ({ href }) => {
   return (
-    <Link href={href} className="fixed top-[56px] left-4 z-50 ">
-      <Image src="/icon-back.svg" alt="Back" width={24} height={24} />
+    <Link className="fixed left-4 top-[56px] z-50 " href={href}>
+      <Image alt="Back" height={24} src="/icon-back.svg" width={24} />
     </Link>
   );
 };

@@ -1,9 +1,9 @@
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 export const SearchButton: React.FC = () => {
   return (
-    <Link href={'/search'} className="fixed top-[56px] right-4 z-50 ">
-      <Image src="/icon-search.svg" alt="Back" width={24} height={24} />
+    <Link className="fixed right-4 top-[56px] z-50 " href={'/search'}>
+      <Image alt="Back" height={24} src="/icon-search.svg" width={24} />
     </Link>
   );
 };
