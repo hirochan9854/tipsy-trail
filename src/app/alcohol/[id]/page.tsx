@@ -14,11 +14,8 @@ export default function Home() {
   const alcohol = mockAlcohols.find((a) => a.id === 1); // idが1のお酒を取得
   return (
     <div className="container text-[#D6D1BF] mx-auto">
-      <div className="flex justify-between align-middle mx-[15px] fixed top-[50px] left-0 right-0 z-10">
-        <BackButton href="/" />
-        <h1></h1>
-        <SearchButton />
-      </div>
+      <BackButton href="/" />
+      <SearchButton />
 
       <div className="mt-[70px] ml-[50px] mb-[191px]">
         <p className="text-[10px]">{alcohol?.ename}</p>
