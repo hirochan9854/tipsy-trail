@@ -3,6 +3,8 @@ import { mockAlcohols } from '@/mock/mockAlcohols';
 import Image from 'next/image';
 import { FavoriteButton } from '@/components/FavoriteButton';
 import { useState } from 'react';
+import { SearchButton } from '@/components/SearchButton';
+import { BackButton } from '@/components/BackButton';
 
 export default function Home() {
   const [isFavorite, setIsFavorite] = useState(false);
@@ -13,17 +15,12 @@ export default function Home() {
   return (
     <div className="container text-[#D6D1BF] mx-auto">
       <div className="flex justify-between align-middle mx-[15px] fixed top-[50px] left-0 right-0 z-10">
-        <a href="/">
-          <Image src="/icon-arrow.svg" width={24} height={24} alt="矢印" />
-        </a>
-        {/* タイトルを入れる */}
-        <h1>TipsyTrail</h1>
-        <a href="/">
-          <Image src="/icon-serach.svg" width={24} height={24} alt="検索" />
-        </a>
+        <BackButton href="/" />
+        <h1></h1>
+        <SearchButton />
       </div>
 
-      <div className="mt-[123px] ml-[50px] mb-[191px]">
+      <div className="mt-[70px] ml-[50px] mb-[191px]">
         <p className="text-[10px]">{alcohol?.ename}</p>
         <h2 className="text-lg font-normal">{alcohol?.name}</h2> {/* お酒のベースを表示 */}
       </div>
