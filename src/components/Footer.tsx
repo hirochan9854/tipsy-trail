@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="fixed bottom-0 left-0 right-0 z-10 ">
+    <footer className="fixed bottom-0 left-0 right-0 z-60 ">
       <nav className="flex justify-around items-center bg-[#0C151B] text-[#BDB9AA] mb-[10px] text-[10px]">
         <a href="/" className="flex flex-col items-center">
           <IconHome isCurrent={isCurrent.home} />
