@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Footer } from '@/components/Footer';
+import { BackButton } from '@/components/BackButton';
 
 export const metadata: Metadata = {
   title: 'Tipsy Trail',
