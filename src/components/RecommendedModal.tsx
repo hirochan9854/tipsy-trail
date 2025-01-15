@@ -26,8 +26,8 @@ export const RecommendedModal: React.FC = () => {
     return (
       <div>
         <div className="fixed inset-0 flex items-center justify-center z-30">
-          <div className="relative w-[300px] h-[500px] rounded-[10px] overflow-hidden">
-            <div className="size-full opacity-60 bg-white px-[45px] py-[40px]">
+          <div className="relative w-[300px]  rounded-[10px] overflow-hidden">
+            <div className="size-full  bg-[#9EA1A4] px-[45px] py-[40px]">
               <h2>本日のおすすめ</h2>
               <Image width={210} height={8} alt="" src={'/deco-line.svg'} />
               <Image src={'/img-sample-sake.png'} width={108} height={121} alt="" className="mx-auto my-[10px]" />

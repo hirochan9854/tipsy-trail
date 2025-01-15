@@ -8,24 +8,23 @@ import { BackButton } from '@/components/BackButton';
 
 export default function Home() {
   const [isFavorite, setIsFavorite] = useState(false);
-  const hundleFavorite = () => {
+  const handleFavorite = () => {
     setIsFavorite(!isFavorite);
   };
   const alcohol = mockAlcohols.find((a) => a.id === 1); // idが1のお酒を取得
   return (
-    <div className="container text-[#D6D1BF] mx-auto">
+    <div className="container text-[#D6D1BF] mx-auto ">
       <div className="flex justify-between align-middle mx-[15px] fixed top-[50px] left-0 right-0 z-10">
         <BackButton href="/" />
-        <h1></h1>
         <SearchButton />
       </div>
 
-      <div className="mt-[70px] ml-[50px] mb-[191px]">
+      <div className="mt-[50px] ml-[50px] mb-[150px]">
         <p className="text-[10px]">{alcohol?.ename}</p>
         <h2 className="text-lg font-normal">{alcohol?.name}</h2> {/* お酒のベースを表示 */}
       </div>
 
-      <div className="rounded-s-[30px] rounded-e-[30px] relative text-[#FFFFFF] bg-gradient-to-b from-[#D6D1BF] to-[#0C151B] p-[20px] mb-[150px]">
+      <div className="rounded-s-[30px] rounded-e-[30px] relative text-[#FFFFFF] bg-gradient-to-b from-[#D6D1BF] to-[#0C151B] p-[20px] mb-[100px]">
         <Image
           className="absolute top-[-150px] right-[44px]"
           src="/img-sample-sake.png"
@@ -55,7 +54,7 @@ export default function Home() {
         </ul>
 
         <div className="w-[280px] mx-auto mt-[20px]">
-          <FavoriteButton isFavorite={isFavorite} onClick={hundleFavorite} />
+          <FavoriteButton isFavorite={isFavorite} onClick={handleFavorite} />
         </div>
       </div>
     </div>
