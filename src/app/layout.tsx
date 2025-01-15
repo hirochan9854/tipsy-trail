@@ -13,7 +13,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className="bg-[#0C151B] relative">
+      <body className="bg-[#0C151B] relative z-0">
+        <h1 className="text-lg font-bold text-[#D6D1BF] text-center  mt-[50px]">TipsyTrail</h1>
         {children}
         <Footer />
       </body>

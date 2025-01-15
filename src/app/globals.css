@@ -4,6 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+html {
   font-family: 'Shippori Mincho', 'Shippori Antique', serif;
 }
