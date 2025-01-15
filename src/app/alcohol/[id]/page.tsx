@@ -5,7 +5,6 @@ import { useState } from 'react';
 import { BackButton } from '@/components/BackButton';
 import { FavoriteButton } from '@/components/FavoriteButton';
 import { SearchButton } from '@/components/SearchButton';
-
 import { mockAlcohols } from '@/mock/mockAlcohols';
 
 export default function Home() {

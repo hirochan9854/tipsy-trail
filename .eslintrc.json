@@ -10,27 +10,49 @@
   "parserOptions": {
     "project": "./tsconfig.json"
   },
-  "plugins": ["unused-imports"],
+  "plugins": ["import", "unused-imports", "tailwindcss"],
   "rules": {
     "react/jsx-sort-props": "error",
     "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
+    ],
     "import/order": [
       "error",
       {
         "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object", "type"],
-        "newlines-between": "always",
-        "pathGroupsExcludedImportTypes": ["builtin"],
         "pathGroups": [
           {
-            "pattern": "@/components/**",
+            "pattern": "@/**",
             "group": "internal",
-            "position": "before"
+            "position": "after"
+          },
+          {
+            "pattern": "*.{css,scss,sass,less}",
+            "group": "type",
+            "position": "after"
           }
         ],
+        "newlines-between": "always",
         "alphabetize": {
-          "order": "asc"
+          "order": "asc",
+          "caseInsensitive": true
         }
       }
-    ]
+    ],
+    "tailwindcss/classnames-order": "error",
+    "tailwindcss/enforces-negative-arbitrary-values": "error",
+    "tailwindcss/enforces-shorthand": "error",
+    "tailwindcss/migration-from-tailwind-2": "error",
+    "tailwindcss/no-arbitrary-value": "off",
+    "tailwindcss/no-custom-classname": "error",
+    "tailwindcss/no-contradicting-classname": "error"
+  },
+  "settings": {
+    "tailwindcss": {
+      "callees": ["cn", "clsx", "twMerge"],
+      "config": "tailwind.config.js"
+    }
   }
 }

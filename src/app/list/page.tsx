@@ -6,7 +6,7 @@ export default function Home() {
     <div>
       <DisplayGroupList initialCurrent="ビール" />
       <div className="mt-24 grid  grid-cols-3 gap-6 ">
-        {[...Array(9)].map((_, i) => (
+        {Array.from({ length: 9 }).map((_, i) => (
           <AlcoholListItem key={i} />
         ))}
       </div>

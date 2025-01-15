@@ -48,7 +48,9 @@ export const DisplayGroupList = ({ initialCurrent }: GroupListProps) => {
           (name) => (
             <li
               className={`cursor-pointer text-nowrap font-semibold ${
-                current === name ? 'text-ll text-[#D6D1BF] underline underline-offset-4' : 'text-base text-[#333333]'
+                current === name
+                  ? 'text-[20px] text-[#D6D1BF] underline underline-offset-4'
+                  : 'text-base text-[#333333]'
               }`}
               key={name}
               onClick={() => handleClick(name)}
